@@ -4,7 +4,9 @@ function App() {
 
   return (
     <>
-    <h1>Welcome to dashboard.</h1>
+    <div>
+      
+    </div>
     </>
   )
 }
