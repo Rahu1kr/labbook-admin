@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { login } from "@/http/Api";
 import { cn } from "@/lib/utils";
 import { useMutation } from "@tanstack/react-query";
+import { spawn } from "child_process";
 import { LoaderCircle } from "lucide-react";
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -52,7 +53,8 @@ const LoginPage = () => {
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account.
+            Enter your email below to login to your account.<br />
+            {mutation.isError && <span className="text-red-500 text-sm">{mutation.error.message}</span>}
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
