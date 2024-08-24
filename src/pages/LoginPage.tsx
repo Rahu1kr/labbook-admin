@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { login } from "@/http/Api";
+import { login } from "@/http/api";
 import { cn } from "@/lib/utils";
 import useTokenStore from "@/store";
 import { useMutation } from "@tanstack/react-query";

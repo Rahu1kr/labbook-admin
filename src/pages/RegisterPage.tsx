@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { register } from "@/http/Api"
+import { register } from "@/http/api"
 import { cn } from "@/lib/utils"
 import useTokenStore from "@/store"
 
