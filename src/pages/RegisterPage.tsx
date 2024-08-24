@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { register } from "@/http/Api"
 import { cn } from "@/lib/utils"
+import useTokenStore from "@/store"
 
 import { useMutation } from "@tanstack/react-query"
 import { LoaderCircle } from "lucide-react"
@@ -12,6 +13,7 @@ import { useRef } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 const RegisterPage = () => {
+  const setToken = useTokenStore((state) => state.setToken);
 
   const navigate = useNavigate();
 
@@ -22,8 +24,9 @@ const RegisterPage = () => {
   // Mutations
   const mutation = useMutation({
     mutationFn: register,
-    onSuccess: () => {
+    onSuccess: (response) => {
       console.log("Login successful");
+      setToken(response.data.accessToken)
       // redirect to dashboard
       navigate("/dashboard/home");
     },
