@@ -67,7 +67,7 @@ const BooksPage = () => {
         </Link>
       </div>
 
-      <Card x-chunk="dashboard-06-chunk-0" className="mt-4">
+      <Card x-chunk="dashboard-06-chunk-0" className="mt-6">
         <CardHeader>
           <CardTitle>Books</CardTitle>
           <CardDescription>
