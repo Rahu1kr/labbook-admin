@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const api = axios.create({
     // todo: move this value to env variable
-    baseURL: "http://localhost:5513",
+    baseURL: import.meta.env.VITE_PUBLIC_BACKEND_URL,
     headers: {
         'Content-Type': 'application/json',
     },
