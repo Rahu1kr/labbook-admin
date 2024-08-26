@@ -39,7 +39,8 @@ import { Link } from "react-router-dom";
 
 const BooksPage = () => {
   // todo: loading and error msg
-  const { data, isLoading, isError } = useQuery({
+  // const { data, isLoading, isError } = useQuery({
+  const { data } = useQuery({
     queryKey: ["books"],
     queryFn: getBooks,
     staleTime: 1000, //in milli-sec
